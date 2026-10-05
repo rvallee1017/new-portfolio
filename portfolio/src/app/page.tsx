@@ -1,18 +1,39 @@
-import Link from "next/dist/client/link";
+"use client";
+
+import { useEffect, useRef } from "react";
+import Link from "next/link";
 import NavBar from "./components/NavBar";
+import Typed from "typed.js";
 
 export default function Home() {
+  const typedRef = useRef<HTMLSpanElement>(null);
+
+useEffect(() => {
+  if (!typedRef.current) return;
+
+  const typed = new Typed(typedRef.current, {
+    strings: ["Frontend Developer, React Developer, Web Designer"],
+    typeSpeed: 70,
+    backSpeed: 40,
+    backDelay: 1500,
+    loop: true,
+  });
+
+  return () => {
+    typed.destroy();
+  };
+}, []);
   return (
     <>
     <NavBar />
 
       <main className="w-[95%] mx-auto mt-5">
         <section className="flex flex-col-reverse md:flex-row-reverse items-center justify-center gap-6">
-          <div className="text-left">
+          <div className="text-center md:text-left">
             <div className="text-[30px] font-semibold text-[#b81bf6] mb-2.5 align-center justify-center">
               <h1 className="align-center">Rachael Vallee</h1>
               <div className="type">
-                I am a <span id="element">Frontend Developer.</span>
+                I am a <span ref={typedRef}></span>
                 <span className="typed-cursor typed-cursor--blink" aria-hidden="true">
                   |
                 </span>
