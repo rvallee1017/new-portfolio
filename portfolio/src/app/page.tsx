@@ -4,6 +4,9 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import NavBar from "./components/NavBar";
 import Typed from "typed.js";
+import email from "./email.svg";
+import linkedin from "./linkedin.svg";
+import github from "./github.svg";
 
 export default function Home() {
   const typedRef = useRef<HTMLSpanElement>(null);
@@ -44,13 +47,13 @@ useEffect(() => {
 
             <div className="mt-4 flex gap-4">
               <Link href="mailto:rachaelvallee2019@gmail.com">
-                <img src="email.svg" id="email" alt="Email" />
+                <img src={email} alt="Email" />
               </Link>
               <Link href="https://www.linkedin.com/in/rachael-vallee">
-                <img src="linkedin.svg" id="linkedin" alt="LinkedIn" />
+                <img src={linkedin} alt="LinkedIn" />
               </Link>
               <Link href="https://github.com/rvallee1017">
-                <img src="github.svg" id="github" alt="Github" />
+                <img src={github} alt="Github" />
               </Link>
             </div>
           </div>
