@@ -12,7 +12,11 @@ useEffect(() => {
   if (!typedRef.current) return;
 
   const typed = new Typed(typedRef.current, {
-    strings: ["Frontend Developer, React Developer, Web Designer"],
+    strings: [
+      "Frontend Developer", 
+      "React Developer", 
+      "Web Designer"
+    ],
     typeSpeed: 70,
     backSpeed: 40,
     backDelay: 1500,
@@ -34,9 +38,7 @@ useEffect(() => {
               <h1 className="align-center">Rachael Vallee</h1>
               <div className="type">
                 I am a <span ref={typedRef}></span>
-                <span className="typed-cursor typed-cursor--blink" aria-hidden="true">
-                  |
-                </span>
+                <span className="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
               </div>
             </div>
 
@@ -59,7 +61,7 @@ useEffect(() => {
         </section>
       </main>
 
-      <footer className="mt-5 text-center">
+      <footer className="mt-5 text-center fixed bottom-5 left-0 right-0 text-[#b81bf6] py-2">
         <p>
           Made With <span style={{ color: "red" }}>❤</span> and &lt;/&gt; by Rachael Vallee.
         </p>
