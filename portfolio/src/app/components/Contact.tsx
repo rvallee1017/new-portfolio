@@ -54,21 +54,21 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="w-8 h-8" src="/email.svg" alt="Email" />
+            <img className="w-10 h-10" src="/email.svg" alt="Email" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/rachael-vallee-3b215a19b"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="w-8 h-8" src="/linkedin.svg" alt="LinkedIn" />
+            <img className="w-10 h-10" src="/linkedin.svg" alt="LinkedIn" />
           </Link>
           <Link
             href="https://github.com/rvallee1017"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="w-8 h-8" src="/github.svg" alt="Github" />
+            <img className="w-10 h-10" src="/github.svg" alt="Github" />
           </Link>
         </div>
       </div>

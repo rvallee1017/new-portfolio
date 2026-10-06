@@ -25,17 +25,17 @@ export default function Navbar() {
         className={`fixed top-17.5 left-0 right-0 bottom-0 z-50 bg-[#1c1c21] font-semibold text-[20px] text-[#b81bf6] transition-all duration-300 ease-in-out 
         ${menuOpen ? "flex flex-col items-center" : "hidden"}`}
       >
-        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
+        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center hover:text-white items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
           <a href="/" data-section="/home">
             Home
           </a>
         </li>
-        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
+        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center hover:text-white items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
           <a href="/about" data-section="/about">
             About
           </a>
         </li>
-        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
+        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center hover:text-white items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
           <a href="/education" data-section="/education">
             Education & Skills
           </a>
@@ -45,12 +45,12 @@ export default function Navbar() {
             Projects
           </a>
         </li>
-        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
+        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center hover:text-white items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
           <a href="Resume.png" target="_blank">
             Resume
           </a>
         </li>
-        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
+        <li className="w-24.25 transition-color duration-100ms ease-in-out py-5 px-2.5 flex justify-center hover:text-white items-center relative overflow-hidden text-[#b81bf6] hover:text-white">
           <a href="/contact" data-section="/contact">
             Contact
           </a>
