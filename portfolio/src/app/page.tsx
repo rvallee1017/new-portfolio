@@ -33,7 +33,7 @@ useEffect(() => {
     <>
     <NavBar />
 
-      <main className="w-[95%] mx-auto mt-5">
+      <main className="w-[95%] mt-5">
         <section className="flex flex-col-reverse md:flex-col-reverse items-center justify-center gap-6">
           <div className="text-center md:text-left">
             <div className="text-[30px] font-semibold text-[#b81bf6] mb-2.5 align-center justify-center">

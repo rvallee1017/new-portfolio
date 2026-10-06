@@ -33,7 +33,7 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 };
 
   return (
-    <section className="md:m-[10px] md:w-full md:h-full md:p-[20px] m-[40px] w-full h-full p-[40px] text-[#b81bf6]">
+    <section className="md:m-[10px] md:p-[20px] md:w-full md:h-full w-full h-full p-[40px] text-[#b81bf6]">
       <div className="flex justify-start w-full items-center mb-[15px] bg-[#26262c] p-2 rounded-md">
         <h3 className="text-[#b81bf6] pl-[25px] text-[20px] md:text-3xl">Contact</h3>
         <div className="w-[50px] h-[2px] bg-white m-[10px]"></div>
