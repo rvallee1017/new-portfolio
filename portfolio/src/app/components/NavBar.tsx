@@ -13,6 +13,13 @@ export default function Navbar() {
     document.documentElement.setAttribute("data-theme", currentTheme);
   }, []);
 
+  const toggleTheme = () => {
+  const nextTheme = theme === "dark" ? "light" : "dark";
+  setTheme(nextTheme);
+  localStorage.setItem("theme", nextTheme);
+  document.documentElement.setAttribute("data-theme", nextTheme);
+};
+
   const toggleMenu = () => {
     const newState = !menuOpen;
     setMenuOpen(newState);
