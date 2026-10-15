@@ -1,28 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0a0a0a;
+  --bg-card: #26262c;
+  --bg-card-inner: #202021;
+  --bg-input: #3a3a3d;
+  --text-primary: #b81bf6;
+  --text-secondary: #ededed;
+  --border-color: #ffffff;
+  --hover-bg: #dba1f9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-card: #f3f4f6;
+  --bg-card-inner: #e5e7eb;
+  --bg-input: #f9fafb;
+  --text-primary: #8e10c0;
+  --text-secondary: #171717;
+  --border-color: #374151;
+  --hover-bg: #e9d5ff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg-primary: #ffffff;
+    --bg-card: #f3f4f6;
+    --bg-card-inner: #e5e7eb;
+    --bg-input: #f9fafb;
+    --text-primary: #8e10c0;
+    --text-secondary: #171717;
+    --border-color: #374151;
+    --hover-bg: #e9d5ff;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+div, section, article, nav, main, footer, input, textarea, button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-links {

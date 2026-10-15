@@ -3,7 +3,7 @@ import Education from "../components/Education";
 
 export default function EducationPage() {
   return (
-    <div className="bg-[#1c1c21] min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--bg-primary)" }}>
       <Navbar />
       <Education />
     </div>

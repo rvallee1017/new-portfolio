@@ -4,15 +4,15 @@ export default function About() {
   return (
     <>
       <section className="md:flex md:justify-center md:items-center md:gap-10 mt-10 md:mx-10 block flex flex-col justify-center items-center gap-10 text-[16px]">
-        <div className="flex justify-start w-full items-center mb-[15px] bg-[#26262c] p-2 rounded-md">
-          <h3 className="text-[#b81bf6] pl-[25px] text-[20px]">About</h3>
-          <div className="w-[50px] h-[2px] bg-white m-[10px]"></div>
+        <div className="flex justify-start w-full items-center mb-[15px] p-2 rounded-md" style={{ backgroundColor: "var(--bg-card)" }}>
+          <h3 className="pl-[25px] text-[20px]" style={{ color: "var(--text-primary)" }}>About</h3>
+          <div className="w-[50px] h-[2px] m-[10px]" style={{ backgroundColor: "var(--border-color)" }}></div>
         </div>
         <div className="w-full flex flex-col  justify-center items-center gap-10">
-          <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4  md:w-[300px] md:h-[400px]  bg-[#26262c] rounded-md">
+          <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4  md:w-[300px] md:h-[400px] rounded-md" style={{ backgroundColor: "var(--bg-card)" }}>
             <img className="w-[200px] h-[200px] rounded-full object-cover pt-2" src="rachael.png" alt="Rachael Vallee" />
-            <h3 className="text-xl font-bold text-[#b81bf6] align-center p-0 m-0">Rachael Vallee</h3>
-            <ul className="text-[#b81bf6]">
+            <h3 className="text-xl font-bold align-center p-0 m-0" style={{ color: "var(--text-primary)" }}>Rachael Vallee</h3>
+            <ul style={{ color: "var(--text-primary)" }}>
               <li>
                 <i className="arrow">&gt; </i>
                 <strong>Birthday:</strong> October 2000
@@ -31,8 +31,8 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className="md:mt-[15px] md:ml-[15px] md:w-[500px] md:h-fit md:mb-12 bg-[#26262c] rounded-md p-6 mb-12">
-            <p className="text-[#b81bf6] text-[16px]">
+          <div className="md:mt-[15px] md:ml-[15px] md:w-[500px] md:h-fit md:mb-12 rounded-md p-6 mb-12" style={{ backgroundColor: "var(--bg-card)" }}>
+            <p className="text-[16px]" style={{ color: "var(--text-primary)" }}>
               Hello,
               <br />
               <br />

@@ -33,54 +33,59 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 };
 
   return (
-    <section className="md:m-[10px] md:p-[20px] md:w-full md:h-full w-full h-full p-[40px] text-[#b81bf6]">
-      <div className="flex justify-start w-full items-center mb-[15px] bg-[#26262c] p-2 rounded-md">
-        <h3 className="text-[#b81bf6] pl-[25px] text-[20px] md:text-3xl">Contact</h3>
-        <div className="w-[50px] h-[2px] bg-white m-[10px]"></div>
+    <section className="md:m-[10px] md:p-[20px] md:w-full md:h-full w-full h-full p-[40px]" style={{ color: "var(--text-primary)" }}>
+      <div className="flex justify-start w-full items-center mb-[15px] p-2 rounded-md" style={{ backgroundColor: "var(--bg-card)" }}>
+        <h3 className="pl-[25px] text-[20px] md:text-3xl" style={{ color: "var(--text-primary)" }}>Contact</h3>
+        <div className="w-[50px] h-[2px] m-[10px]" style={{ backgroundColor: "var(--border-color)" }}></div>
       </div>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit bg-[#26262c] rounded-md h-fit md:w-[668px] md:text-xl mx-auto m-block-[15px] mb-12">
-        <div className="flex flex-col items-center gap-4 p-6 w-full max-w-[400px] border border-[#b81bf6] bg-[#202021] rounded-3xl">
-          <h3 className="text-xl font-bold text-[#b81bf6] align-center p-0 m-0 md:text-3xl">
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit rounded-md h-fit md:w-[668px] md:text-xl mx-auto m-block-[15px] mb-12" style={{ backgroundColor: "var(--bg-card)" }}>
+        <div className="flex flex-col items-center gap-4 p-6 w-full max-w-[400px] rounded-3xl" style={{ backgroundColor: "var(--bg-card-inner)", border: "1px solid var(--text-primary)" }}>
+          <h3 className="text-xl font-bold align-center p-0 m-0 md:text-3xl" style={{ color: "var(--text-primary)" }}>
             Get In Touch
           </h3>
           <input
-            className="bg-[#3a3a3d] text-[#b81bf6] placeholder:text-[#b81bf6] border border-[#b81bf6] focus:outline-none focus:ring-2 focus:ring-purple-300 align-center rounded-md p-2"
+            className="align-center rounded-md p-2 border focus:outline-none focus:ring-2 focus:ring-purple-300"
+            style={{ backgroundColor: "var(--bg-input)", color: "var(--text-primary)", borderColor: "var(--text-primary)" }}
             name="name"
             type="text"
             placeholder="Name"
             required
           />
           <input
-            className="bg-[#3a3a3d] text-[#b81bf6] placeholder:text-[#b81bf6] border border-[#b81bf6] focus:outline-none focus:ring-2 focus:ring-purple-300 align-center rounded-md p-2"
+            className="align-center rounded-md p-2 border focus:outline-none focus:ring-2 focus:ring-purple-300"
+            style={{ backgroundColor: "var(--bg-input)", color: "var(--text-primary)", borderColor: "var(--text-primary)" }}
             name="email"
             type="email"
             placeholder="Email"
             required
           />
           <input
-            className="bg-[#3a3a3d] text-[#b81bf6] placeholder:text-[#b81bf6] border border-[#b81bf6] focus:outline-none focus:ring-2 focus:ring-purple-300 align-center rounded-md p-2"
+            className="align-center rounded-md p-2 border focus:outline-none focus:ring-2 focus:ring-purple-300"
+            style={{ backgroundColor: "var(--bg-input)", color: "var(--text-primary)", borderColor: "var(--text-primary)" }}
             name="subject"
             type="text"
             placeholder="Subject"
             required
           />
           <textarea
-            className="bg-[#3a3a3d] text-[#b81bf6] placeholder:text-[#b81bf6] border border-[#b81bf6] focus:outline-none focus:ring-2 focus:ring-purple-300 align-center rounded-md p-2"
+            className="align-center rounded-md p-2 border focus:outline-none focus:ring-2 focus:ring-purple-300"
+            style={{ backgroundColor: "var(--bg-input)", color: "var(--text-primary)", borderColor: "var(--text-primary)" }}
             name="message"
             placeholder="Message"
             rows={4}
             required
           />
           <button
-            className="bg-[#b81bf6] text-[#26262c] hover:bg-white hover:text-[#b81bf6] font-bold py-2 px-4 rounded-md transition duration-300"
+            className="font-bold py-2 px-4 rounded-md transition duration-300 cursor-pointer"
+            style={{ backgroundColor: "var(--text-primary)", color: "var(--bg-primary)" }}
             type="submit"
           >
             SUBMIT
           </button>
         </div>
       </form>
-      <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit bg-[#26262c] rounded-md h-fit md:w-[668px] md:text-xl mx-auto m-block-[15px] mb-12 text-3xl">
-        <h3 className="text-xl font-bold text-[#b81bf6] align-center p-0 m-0 md:text-3xl">
+      <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit rounded-md h-fit md:w-[668px] md:text-xl mx-auto m-block-[15px] mb-12 text-3xl" style={{ backgroundColor: "var(--bg-card)" }}>
+        <h3 className="text-xl font-bold align-center p-0 m-0 md:text-3xl" style={{ color: "var(--text-primary)" }}>
           Social
         </h3>
         <div className="mt-4 flex gap-4 justify-center ">
@@ -107,8 +112,8 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit bg-[#26262c] rounded-md h-fit md:w-[668px] md:text-xl mx-auto m-block-[15px] mb-12">
-        <h3 className="text-xl font-bold text-[#b81bf6] align-center p-0 m-0 md:text-3xl">
+      <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit rounded-md h-fit md:w-[668px] md:text-xl mx-auto m-block-[15px] mb-12" style={{ backgroundColor: "var(--bg-card)" }}>
+        <h3 className="text-xl font-bold align-center p-0 m-0 md:text-3xl" style={{ color: "var(--text-primary)" }}>
           Address
         </h3>
           <Link
@@ -118,7 +123,7 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
           >
             <img className="w-20 h-20" src="/location.svg" alt="Google Maps" />
           </Link>{" "}
-          <p className="text-[#b81bf6]">Lockesburg, AR 71846</p>
+          <p style={{ color: "var(--text-primary)" }}>Lockesburg, AR 71846</p>
         </div>
     </section>
   );
