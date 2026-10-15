@@ -43,7 +43,7 @@ useEffect(() => {
               </h2>
             </div>
 
-            <div className="mt-4 flex gap-4 fixed md:bottom-40 left-0 right-0 justify-center md:justify-center">
+            <div className="mt-8 flex gap-4 justify-center">
               <Link href="mailto:rachaelvallee2019@gmail.com" target="_blank" rel="noopener noreferrer">
                 <img className="w-10 h-10" src="/email.svg" alt="Email" />
               </Link>
@@ -62,8 +62,8 @@ useEffect(() => {
         </section>
       </main>
 
-      <footer className="mt-5 text-center fixed bottom-5 left-0 right-0 text-[#b81bf6] py-2">
-        <p>
+      <footer className="my-10 text-center text-[#b81bf6] py-2">
+        <p style={{ color: "var(--text-primary)" }}>
           Made with <span style={{ color: "red" }}>❤</span> and &lt;/&gt; by Rachael Vallee.
         </p>
       </footer>
