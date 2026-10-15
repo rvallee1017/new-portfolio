@@ -7,19 +7,25 @@ export default function Navbar() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const currentTheme = document.documentElement.getAttribute("data-theme") as "dark" | "light";
-    if (currentTheme) {
-      setTheme(currentTheme);
-    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-      setTheme("light");
-    }
+    const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
+    const currentTheme = savedTheme || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    setTheme(currentTheme);
+    document.documentElement.setAttribute("data-theme", currentTheme);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
+  const toggleMenu = () => {
+    const newState = !menuOpen;
+    setMenuOpen(newState);
+    if (newState) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    document.body.style.overflow = "unset";
   };
 
   return (
@@ -55,7 +61,7 @@ export default function Navbar() {
         </button>
 
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={toggleMenu}
           className="text-[30px] cursor-pointer block flex-end"
           style={{ color: "var(--text-primary)" }}
         >
@@ -64,37 +70,37 @@ export default function Navbar() {
       </div>
 
       <ul
-        className={`fixed top-17.5 left-0 right-0 bottom-0 z-50 font-semibold text-[20px] transition-all duration-300 ease-in-out 
-        ${menuOpen ? "flex flex-col items-center" : "hidden"}`}
+        className={`fixed inset-x-0 bottom-0 top-[70px] z-50 font-semibold text-[24px] transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-8 
+        ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none hidden"}`}
         style={{ backgroundColor: "var(--bg-primary)", color: "var(--text-primary)" }}
       >
-        <li className="w-24.25 py-5 px-2.5 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="/" data-section="/home" className="hover:opacity-80">
+        <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
+          <a href="/" data-section="/home" className="hover:opacity-80" onClick={closeMenu}>
             Home
           </a>
         </li>
-        <li className="w-24.25 py-5 px-2.5 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="/about" data-section="/about" className="hover:opacity-80">
+        <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
+          <a href="/about" data-section="/about" className="hover:opacity-80" onClick={closeMenu}>
             About
           </a>
         </li>
-        <li className="w-24.25 py-5 px-2.5 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="/education" data-section="/education" className="hover:opacity-80">
+        <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
+          <a href="/education" data-section="/education" className="hover:opacity-80" onClick={closeMenu}>
             Education & Skills
           </a>
         </li>
-        <li className="w-24.25 py-5 px-2.5 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="/projects" data-section="/projects" className="hover:opacity-80">
+        <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
+          <a href="/projects" data-section="/projects" className="hover:opacity-80" onClick={closeMenu}>
             Projects
           </a>
         </li>
-        <li className="w-24.25 py-5 px-2.5 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="Resume.png" target="_blank" className="hover:opacity-80">
+        <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
+          <a href="Resume.png" target="_blank" className="hover:opacity-80" onClick={closeMenu}>
             Resume
           </a>
         </li>
-        <li className="w-24.25 py-5 px-2.5 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="/contact" data-section="/contact" className="hover:opacity-80">
+        <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
+          <a href="/contact" data-section="/contact" className="hover:opacity-80" onClick={closeMenu}>
             Contact
           </a>
         </li>
