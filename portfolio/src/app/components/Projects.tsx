@@ -83,6 +83,31 @@ export default function Projects() {
             </li>
           </ul>
         </div>
+
+        <div className="flex flex-col justify-center items-center gap-4 p-6 md:p-4 md:fit rounded-md h-fit md:w-[668px] md:text-xl mx-12 m-block-[15px] mb-12 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:opacity-95" style={{ backgroundColor: "var(--bg-card)" }}>
+          <h3 className="text-xl font-bold align-center p-0 m-0 md:text-3xl transition-colors duration-300" style={{ color: "var(--text-primary)" }}>
+            Project 4: Skinstric AI Intership
+          </h3>
+          <div className="w-[150px] h-[2px] m-[10px] opacity-50 transition-colors duration-300" style={{ backgroundColor: "var(--border-color)" }}></div>
+
+          <ul style={{ color: "var(--text-primary)" }} className="transition-colors duration-300">
+            <li>
+              <i className="arrow">&gt; </i>
+              <strong>Description:</strong> Skinstric is an interactive, A.I.-powered web application designed to act like a personal skin expert in your browser.
+            </li>
+            <li>
+              <i className="arrow">&gt; </i>
+              <strong>Technologies Used:</strong> React, TypeScript, Tailwind CSS, Next.js, AI
+            </li>
+            <li>
+              <i className="arrow">&gt; </i>
+              <strong>Link:</strong>{' '}
+              <a href="https://skinstric-git-main-leigh5.vercel.app/" target="_blank" rel="noreferrer" style={{ color: "var(--text-primary)" }} className="hover:opacity-80 underline">
+                View Project
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
