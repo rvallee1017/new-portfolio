@@ -102,7 +102,7 @@ export default function Navbar() {
           </a>
         </li>
         <li className="w-fit py-3 px-6 flex justify-center items-center relative overflow-hidden" style={{ color: "var(--text-primary)" }}>
-          <a href="./Resume.pdf" target="_blank" className="hover:opacity-80" onClick={closeMenu}>
+          <a href="./Resume.docx" target="_blank" className="hover:opacity-80" onClick={closeMenu}>
             Resume
           </a>
         </li>
